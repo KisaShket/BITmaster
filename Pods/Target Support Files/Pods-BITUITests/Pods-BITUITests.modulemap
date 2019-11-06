@@ -1,0 +1,6 @@
+framework module Pods_BITUITests {
+  umbrella header "Pods-BITUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

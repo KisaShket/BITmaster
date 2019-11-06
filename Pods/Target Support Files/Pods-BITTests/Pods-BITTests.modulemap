@@ -1,0 +1,6 @@
+framework module Pods_BITTests {
+  umbrella header "Pods-BITTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
