@@ -13,19 +13,64 @@
         <scene sceneID="P6T-yx-Hrh">
             <objects>
                 <tableViewController id="jrV-XQ-XOy" customClass="TableViewController" customModule="BIT" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="tjJ-0K-9sq">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="tjJ-0K-9sq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="separatorColor" red="0.77560007572174072" green="0.77637606859207153" blue="0.97529369592666626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="gitCell" rowHeight="145" id="Eho-Ef-JUr">
-                                <rect key="frame" x="0.0" y="28" width="414" height="145"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="gitCell" rowHeight="115" id="Eho-Ef-JUr" customClass="RepoTableViewCell" customModule="BIT" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="115"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Eho-Ef-JUr" id="YhA-4A-yws">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="144.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Eho-Ef-JUr" id="YhA-4A-yws" userLabel="ContentView">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="115"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Obq-Z0-qgI" userLabel="ShadowView">
+                                            <rect key="frame" x="16" y="-1" width="382" height="115"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qQI-xf-nJt" userLabel="BodyView">
+                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="115"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Repo Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kg-Fw-SzJ">
+                                                            <rect key="frame" x="23" y="11" width="336" height="23"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stars" translatesAutoresizingMaskIntoConstraints="NO" id="s7t-PI-hcH">
+                                                            <rect key="frame" x="23" y="81" width="21" height="18"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E09-Bn-igH">
+                                                            <rect key="frame" x="52" y="80" width="307" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nah-iU-DIQ">
+                                                            <rect key="frame" x="309" y="77" width="54" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="On Map"/>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="bodyView" destination="qQI-xf-nJt" id="XAc-Y9-Auh"/>
+                                    <outlet property="repoNameLabel" destination="5kg-Fw-SzJ" id="Sxs-8M-rGM"/>
+                                    <outlet property="shadowView" destination="Obq-Z0-qgI" id="Xdg-ys-iLK"/>
+                                    <outlet property="starsCountLabel" destination="E09-Bn-igH" id="meA-Dh-dha"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -56,4 +101,7 @@
             <point key="canvasLocation" x="-481" y="398"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="stars" width="16" height="16"/>
+    </resources>
 </document>

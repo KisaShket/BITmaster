@@ -10,7 +10,10 @@
 		15D7B438331A645D6A55A40D /* Pods_BITTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FE55FC1CA3EAF7B9BFC3FA9 /* Pods_BITTests.framework */; };
 		4005215C237175D8005E994B /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 4005215B237175D8005E994B /* Podfile */; };
 		4005215E23720256005E994B /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4005215D23720256005E994B /* TableViewController.swift */; };
-		400521602372D134005E994B /* gitResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4005215F2372D134005E994B /* gitResponse.swift */; };
+		400521642372D278005E994B /* GitResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400521632372D278005E994B /* GitResponse.swift */; };
+		400521662372E188005E994B /* Net.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400521652372E188005E994B /* Net.swift */; };
+		4005216B2372FF8C005E994B /* DataFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4005216A2372FF8C005E994B /* DataFetch.swift */; };
+		4005217123732BD7005E994B /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4005217023732BD7005E994B /* RepoTableViewCell.swift */; };
 		40748D4C236EEBFD0095441A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40748D4B236EEBFD0095441A /* AppDelegate.swift */; };
 		40748D51236EEBFD0095441A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40748D4F236EEBFD0095441A /* Main.storyboard */; };
 		40748D53236EEBFF0095441A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40748D52236EEBFF0095441A /* Assets.xcassets */; };
@@ -41,9 +44,12 @@
 /* Begin PBXFileReference section */
 		1FE55FC1CA3EAF7B9BFC3FA9 /* Pods_BITTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BITTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DCC0088F7C8B48F2BC42ECB /* Pods-BITTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BITTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BITTests/Pods-BITTests.debug.xcconfig"; sourceTree = "<group>"; };
-		4005215B237175D8005E994B /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		4005215B237175D8005E994B /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		4005215D23720256005E994B /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		4005215F2372D134005E994B /* gitResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitResponse.swift; sourceTree = "<group>"; };
+		400521632372D278005E994B /* GitResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitResponse.swift; sourceTree = "<group>"; };
+		400521652372E188005E994B /* Net.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Net.swift; sourceTree = "<group>"; };
+		4005216A2372FF8C005E994B /* DataFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetch.swift; sourceTree = "<group>"; };
+		4005217023732BD7005E994B /* RepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
 		40748D48236EEBFD0095441A /* BIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40748D4B236EEBFD0095441A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40748D50236EEBFD0095441A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -103,6 +109,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		400521682372E362005E994B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				400521632372D278005E994B /* GitResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		400521692372E380005E994B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				400521652372E188005E994B /* Net.swift */,
+				4005216A2372FF8C005E994B /* DataFetch.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		40052172237354E2005E994B /* VIews */ = {
+			isa = PBXGroup;
+			children = (
+				4005217023732BD7005E994B /* RepoTableViewCell.swift */,
+				4005215D23720256005E994B /* TableViewController.swift */,
+			);
+			path = VIews;
+			sourceTree = "<group>";
+		};
 		40748D3F236EEBFD0095441A = {
 			isa = PBXGroup;
 			children = (
@@ -129,13 +161,14 @@
 		40748D4A236EEBFD0095441A /* BIT */ = {
 			isa = PBXGroup;
 			children = (
-				4005215D23720256005E994B /* TableViewController.swift */,
 				40748D4B236EEBFD0095441A /* AppDelegate.swift */,
+				400521682372E362005E994B /* Models */,
+				400521692372E380005E994B /* Network */,
+				40052172237354E2005E994B /* VIews */,
 				40748D4F236EEBFD0095441A /* Main.storyboard */,
 				40748D52236EEBFF0095441A /* Assets.xcassets */,
 				40748D54236EEBFF0095441A /* LaunchScreen.storyboard */,
 				40748D57236EEBFF0095441A /* Info.plist */,
-				4005215F2372D134005E994B /* gitResponse.swift */,
 			);
 			path = BIT;
 			sourceTree = "<group>";
@@ -426,9 +459,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				400521642372D278005E994B /* GitResponse.swift in Sources */,
+				4005216B2372FF8C005E994B /* DataFetch.swift in Sources */,
 				40748D4C236EEBFD0095441A /* AppDelegate.swift in Sources */,
-				400521602372D134005E994B /* gitResponse.swift in Sources */,
 				4005215E23720256005E994B /* TableViewController.swift in Sources */,
+				400521662372E188005E994B /* Net.swift in Sources */,
+				4005217123732BD7005E994B /* RepoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
