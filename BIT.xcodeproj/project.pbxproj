@@ -14,6 +14,7 @@
 		400521662372E188005E994B /* Net.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400521652372E188005E994B /* Net.swift */; };
 		4005216B2372FF8C005E994B /* DataFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4005216A2372FF8C005E994B /* DataFetch.swift */; };
 		4005217123732BD7005E994B /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4005217023732BD7005E994B /* RepoTableViewCell.swift */; };
+		4005217923735A8F005E994B /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4005217823735A8F005E994B /* MapViewController.m */; };
 		40748D4C236EEBFD0095441A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40748D4B236EEBFD0095441A /* AppDelegate.swift */; };
 		40748D51236EEBFD0095441A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40748D4F236EEBFD0095441A /* Main.storyboard */; };
 		40748D53236EEBFF0095441A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40748D52236EEBFF0095441A /* Assets.xcassets */; };
@@ -50,6 +51,9 @@
 		400521652372E188005E994B /* Net.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Net.swift; sourceTree = "<group>"; };
 		4005216A2372FF8C005E994B /* DataFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetch.swift; sourceTree = "<group>"; };
 		4005217023732BD7005E994B /* RepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
+		4005217323735A34005E994B /* BIT-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BIT-Bridging-Header.h"; sourceTree = "<group>"; };
+		4005217723735A8F005E994B /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		4005217823735A8F005E994B /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		40748D48236EEBFD0095441A /* BIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40748D4B236EEBFD0095441A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40748D50236EEBFD0095441A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -131,6 +135,8 @@
 			children = (
 				4005217023732BD7005E994B /* RepoTableViewCell.swift */,
 				4005215D23720256005E994B /* TableViewController.swift */,
+				4005217723735A8F005E994B /* MapViewController.h */,
+				4005217823735A8F005E994B /* MapViewController.m */,
 			);
 			path = VIews;
 			sourceTree = "<group>";
@@ -169,6 +175,7 @@
 				40748D52236EEBFF0095441A /* Assets.xcassets */,
 				40748D54236EEBFF0095441A /* LaunchScreen.storyboard */,
 				40748D57236EEBFF0095441A /* Info.plist */,
+				4005217323735A34005E994B /* BIT-Bridging-Header.h */,
 			);
 			path = BIT;
 			sourceTree = "<group>";
@@ -278,6 +285,7 @@
 				TargetAttributes = {
 					40748D47236EEBFD0095441A = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 					};
 					40748D5B236EEBFF0095441A = {
 						CreatedOnToolsVersion = 10.3;
@@ -465,6 +473,7 @@
 				4005215E23720256005E994B /* TableViewController.swift in Sources */,
 				400521662372E188005E994B /* Net.swift in Sources */,
 				4005217123732BD7005E994B /* RepoTableViewCell.swift in Sources */,
+				4005217923735A8F005E994B /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,6 +649,7 @@
 			baseConfigurationReference = A6AAB7BF3F43C986DC3CDB42 /* Pods-BIT.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WX79G9TM27;
 				INFOPLIST_FILE = BIT/Info.plist;
@@ -650,6 +660,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Ms.BIT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BIT/BIT-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -660,6 +672,7 @@
 			baseConfigurationReference = AA437A455A92C567F5A43579 /* Pods-BIT.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WX79G9TM27;
 				INFOPLIST_FILE = BIT/Info.plist;
@@ -670,6 +683,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Ms.BIT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BIT/BIT-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

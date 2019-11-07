@@ -7,14 +7,21 @@
 //
 
 import UIKit
+//MARK:-Реализация нажатия баттона с передачей индекса
+protocol cellNew {
+    func onClickCell(index:IndexPath)
+}
 
+//MARK:- стиль ячеек
 class RepoTableViewCell: UITableViewCell {
     @IBOutlet weak var repoNameLabel: UILabel!
     @IBOutlet weak var starsCountLabel: UILabel!
     
     @IBOutlet weak var bodyView: UIView!
-    
     @IBOutlet weak var shadowView: UIView!
+    
+    var cellDelegate: cellNew?
+    var index: IndexPath?
     override func awakeFromNib() {
         super.awakeFromNib()
         setupBodyView()
@@ -24,7 +31,6 @@ class RepoTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
-        // Configure the view for the selected state
     }
     
     private func setupShadowView() {
@@ -38,4 +44,9 @@ class RepoTableViewCell: UITableViewCell {
         bodyView.layer.cornerRadius = 14.0
         bodyView.clipsToBounds = true
     }
+    
+    @IBAction func onMapClicked(_ sender: Any) {
+        cellDelegate?.onClickCell(index: index!)
+    }
+    
 }

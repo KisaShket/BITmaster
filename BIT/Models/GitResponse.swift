@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+//MARK: Модель данных
 struct GitResponse:Decodable {
     var total_count: Int?
     var incomplete_results: Bool?

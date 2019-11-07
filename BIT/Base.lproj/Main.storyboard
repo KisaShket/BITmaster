@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -56,6 +57,9 @@
                                                             <rect key="frame" x="309" y="77" width="54" height="30"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <state key="normal" title="On Map"/>
+                                                            <connections>
+                                                                <action selector="onMapClicked:" destination="Eho-Ef-JUr" eventType="touchUpInside" id="MDf-DX-w3k"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -79,10 +83,28 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="GIt Search" id="gWt-uZ-Bka"/>
+                    <connections>
+                        <segue destination="j2u-52-foM" kind="show" identifier="toTheMap" id="nZI-n4-Ng6"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RDg-qP-M42" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="353.62318840579712" y="397.76785714285711"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="ZNV-iS-HBj">
+            <objects>
+                <viewController id="j2u-52-foM" customClass="MapViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="btr-lS-iz7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="c4v-vb-9oi"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B7c-c4-00O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1081" y="399"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DcM-4L-Jsq">
