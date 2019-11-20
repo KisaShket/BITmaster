@@ -10,6 +10,7 @@ import Foundation
 class Net {
     func request(urlString: String, completion: @escaping (Result<Data,Error>)->Void){
         guard let url = URL(string: urlString) else {return}
+        print("UrlSession")
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             DispatchQueue.main.async {
                 if let error = error{

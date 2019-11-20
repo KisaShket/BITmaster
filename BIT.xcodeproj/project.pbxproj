@@ -15,6 +15,7 @@
 		4005216B2372FF8C005E994B /* DataFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4005216A2372FF8C005E994B /* DataFetch.swift */; };
 		4005217123732BD7005E994B /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4005217023732BD7005E994B /* RepoTableViewCell.swift */; };
 		4005217923735A8F005E994B /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4005217823735A8F005E994B /* MapViewController.m */; };
+		403A4CF7238435E8002646F0 /* LoadingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403A4CF6238435E8002646F0 /* LoadingViewCell.swift */; };
 		40748D4C236EEBFD0095441A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40748D4B236EEBFD0095441A /* AppDelegate.swift */; };
 		40748D51236EEBFD0095441A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40748D4F236EEBFD0095441A /* Main.storyboard */; };
 		40748D53236EEBFF0095441A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40748D52236EEBFF0095441A /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 		4005217323735A34005E994B /* BIT-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BIT-Bridging-Header.h"; sourceTree = "<group>"; };
 		4005217723735A8F005E994B /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		4005217823735A8F005E994B /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		403A4CF6238435E8002646F0 /* LoadingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewCell.swift; sourceTree = "<group>"; };
 		40748D48236EEBFD0095441A /* BIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40748D4B236EEBFD0095441A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40748D50236EEBFD0095441A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 		40052172237354E2005E994B /* VIews */ = {
 			isa = PBXGroup;
 			children = (
+				403A4CF6238435E8002646F0 /* LoadingViewCell.swift */,
 				4005217023732BD7005E994B /* RepoTableViewCell.swift */,
 				4005215D23720256005E994B /* TableViewController.swift */,
 				4005217723735A8F005E994B /* MapViewController.h */,
@@ -468,6 +471,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				400521642372D278005E994B /* GitResponse.swift in Sources */,
+				403A4CF7238435E8002646F0 /* LoadingViewCell.swift in Sources */,
 				4005216B2372FF8C005E994B /* DataFetch.swift in Sources */,
 				40748D4C236EEBFD0095441A /* AppDelegate.swift in Sources */,
 				4005215E23720256005E994B /* TableViewController.swift in Sources */,

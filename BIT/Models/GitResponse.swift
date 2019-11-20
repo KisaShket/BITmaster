@@ -11,12 +11,12 @@ import Foundation
 struct GitResponse:Decodable {
     var total_count: Int?
     var incomplete_results: Bool?
-    var items: [Repos]?
+    var items: [Repos]
 }
 
 struct Repos:Decodable {
-    var full_name: String?
-    var stargazers_count: Int?
+    var full_name: String
+    var stargazers_count: Int
 }
 
 

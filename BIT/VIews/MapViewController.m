@@ -8,33 +8,56 @@
 
 #import "MapViewController.h"
 #import "BIT-Swift.h"
+@import GoogleMaps;
 
-@interface MapViewController ()
-
+@interface MapViewController () <GMSMapViewDelegate>
+@property (strong, nonatomic) GMSMapView *mapView;
 @end
 
-@implementation MapViewController
+@implementation MapViewController{
+    
+}
 
 -(void)loadView{
     
     //MARK:-Форматирование полученных данных
     double la = [_latit doubleValue];
     double lo = [_longit doubleValue];
+  
+    
+
+    UIImageView *iconView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 64, 64)];
+    iconView.image = [UIImage imageNamed:@"marker"];
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, -9,64,64)];
+    label.text = _starsCOUNT;
+    label.textAlignment = NSTextAlignmentCenter;
+    label.textColor = [UIColor whiteColor];
+    label.font =[label.font fontWithSize:11];
+    [iconView addSubview:label];
+   
+    
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(64, 64), NO, [[UIScreen mainScreen] scale]);
+    [iconView.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *icon = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    
     
     //MARK:-Центрирование карты
         GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:la
                                                             longitude:lo
                                                                  zoom:kGMSMinZoomLevel];
-    GMSMapView *mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
-    mapView.myLocationEnabled = YES;
-    self.view = mapView;
+    _mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
+    _mapView.myLocationEnabled = YES;
+    self.view = _mapView;
     
     //MARK:-Маркер по сгенерированным координатам
-    GMSMarker *marker = [[GMSMarker alloc] init];
+   GMSMarker *marker = [[GMSMarker alloc] init];
     marker.position = CLLocationCoordinate2DMake(la, lo);
-    marker.title = @"STARS*";
-    marker.snippet = _starsCOUNT;
-    marker.map = mapView;
+    marker.title = @"my title";
+    marker.icon = icon;
+    marker.map = _mapView;
 }
 
 - (void)viewDidLoad {
@@ -42,5 +65,6 @@
     NSString *printStars = self.starsCOUNT;
     NSLog(@"String: %@", printStars);
 }
+
 
 @end
